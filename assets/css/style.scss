@@ -114,7 +114,6 @@ html {
   }
 }
 .shop-logo-header {
-  max-width: 70px;
   @media screen and (max-width: 768px){
     display: block;
     margin: 0 auto;  
@@ -645,7 +644,6 @@ html {
   display: block; /* インライン要素をブロック要素に変える */
   margin-left: auto;
   margin-right: auto; /* 左右のマージンを自動に設定し、中央揃えに */
-  width: 100%;
 
   // スマホレイアウトのときには非表示にする
   @media screen and (max-width: 768px){
@@ -669,7 +667,6 @@ html {
   display: block; /* インライン要素をブロック要素に変える */
   margin-left: auto;
   margin-right: auto; /* 左右のマージンを自動に設定し、中央揃えに */
-  width: 100%;
 
   // スマホレイアウトのときには非表示にする
   @media screen and (max-width: 768px){
@@ -1157,7 +1154,7 @@ html {
 .benefits-elemet{
   display: block; /* インライン要素をブロック要素に変える */
   margin: 50px auto;
-  max-width: 769px;
+  max-width: 968px;
 
   // スマホレイアウトのときには非表示にする
   @media screen and (max-width: 768px){
@@ -1183,7 +1180,7 @@ html {
 }
 .bt-add{
   position: absolute;
-  top: 97px;
+  top: 100px;
   left: 25%;
 
   @media screen and (max-width: 1300px){
