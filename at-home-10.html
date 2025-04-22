@@ -13,7 +13,7 @@
     <!-- リセットcssの読み込み -->
     <link href="assets/css/reset.css" media="all" rel="stylesheet" type="text/css" />
     <!-- cssの読み込み -->
-    <link rel="stylesheet" href="./style.css">
+    <link href="assets/css/style.css" media="all" rel="stylesheet" type="text/css" />
   
     <!-- jQueryの読み込み -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
@@ -25,8 +25,103 @@
 
 <body> 
   <!-- headerを読み込むためのプレースホルダー -->
-  <div id="header-placeholder"></div>
-   
+  <header class="header">
+    <!-- ハンバーガーメニュー・SP用 -->
+    <button id="bt-hamburger" onclick="document.getElementById('nav-sp').style.display = 'block'">
+      <img src="assets/img/bt-hamburger.png" alt="ナビゲーションを開く">
+    </button>
+  
+   <!-- ナビゲーション・SP用 -->
+   <div id="nav-sp">
+      <button id="bt-close" onclick="document.getElementById('nav-sp').style.display = 'none'">
+        <img src="assets/img/bt-close.png" alt="ナビゲーションを閉じる">
+      </button>
+     <!--メニューリスト・SP用 -->
+     <nav class="nav-sp-list">
+       <ul>  
+         <li><a class="menu-sp" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'">ホーム</a></li>
+         <li><a class="menu-sp" href="vacant-room.html" onclick="document.getElementById('nav-sp').style.display = 'none'">空室クリーニング</a></li>    
+         <li><a class="menu-sp" href="at-home.html" onclick="document.getElementById('nav-sp').style.display = 'none'">在宅クリーニング</a></li>     
+         <li><a class="menu-sp" href="about.html" onclick="document.getElementById('nav-sp').style.display = 'none'">店舗概要</a></li> 
+         <li class="menu-sp-bottom"><a class="menu-sp" href="contact.html" onclick="document.getElementById('nav-sp').style.display = 'none'">問い合わせ</a></li> 
+       </ul>
+     </nav>
+   </div>
+    
+  
+    <!-- 店名ロゴ -->
+    <div class="shop-logo-layout">
+      <a href="#">
+        <img class="shop-logo-header" src="assets/img/top/shop-logo-header-02.png" alt="">
+      </a>
+    </div>
+    <!-- PC用ナビゲーション -->
+      <nav>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="vacant-room.html">空室クリーニング</a></li>
+          <li class="at-home-hover"><a href="at-home.html">在宅クリーニング</a></li>
+          <li><a href="about.html">店舗概要</a></li>
+          <li><a href="contact.html">問い合わせ</a></li>
+        </ul>
+      </nav>  
+      
+    <section class="nav-more">
+      <div class="list-top">
+        <div class="list-01">
+          <div class="list-01-first">
+            <h3>＞　空室クリーニング</h3>
+            <a href="vacant-room.html">ー　空室クリーニング</a>  
+          </div>
+          <div class="list-01-second">
+            <h3>＞　エアコンのお掃除</h3>
+            <a href="at-home-01.html">ー　エアコンクリーニング</a>  
+          </div>
+        </div>
+        
+        <div class="list-02">
+          <h3>＞　外回りのお掃除</h3>
+          <a href="at-home-10.html">ー　玄関クリーニング</a>
+          <a href="at-home-11.html">ー　ベランダクリーニング</a>
+          <a href="at-home-09.html">ー　窓・サッシクリーニング</a>
+        </div>
+  
+        <div class="list-03">
+          <h3>＞　インターネット設定</h3>
+          <a href="at-home-12.html">ー　インターネット設定代行</a>
+        </div>
+      </div>
+  
+      <div class="list-bottom">
+        <div class="list-03">
+          <div class="list-03-first">
+            <h3>＞　水まわりのお掃除</h3>
+            <a href="at-home-02.html">ー　浴室クリーニング</a>
+            <a href="at-home-08.html">ー　洗面所クリーニング</a>
+            <a href="at-home-07.html">ー　トイレクリーニング</a>  
+          </div>
+  
+          <div class="list-03-second">
+            <h3>＞　キッチンのお掃除</h3>
+            <a href="at-home-06.html">ー　キッチンクリーニング</a>
+            <a href="at-home-05.html">ー　ファンタイプ・レンジフードクリーニング</a>
+            <a href="at-home-04.html">ー　プロペラタイプ・レンジフードクリーニング</a>  
+          </div>
+        </div>
+        
+        <div class="list-04">
+          <h3>＞　お得なセットプラン</h3>
+          <a href="set-plan.html#set-01">ー　2点セット(浴室、レンジフード)</a>
+          <a href="set-plan.html#set-02">ー　2点セット(キッチン、レンジフード)</a>
+          <a href="set-plan.html#set-03">ー　3点セット(浴室、キッチン、レンジフード)</a>
+          <a href="set-plan.html#set-04">ー　4点セット(浴室、キッチン、レンジフード、洗面所)</a>
+          <a href="set-plan.html#set-05">ー　5点セット(浴室、キッチン、レンジフード、洗面所、トイレ)</a>
+  
+        </div>
+      </div>
+    </section>
+  </header>
+     
    <main>  
     <section class="title-section">
       <div>
@@ -219,13 +314,68 @@
    </main>
 
   <!-- フッターここから -->
-  <div id="footer-placeholder"></div>
-  <!-- フッターここまで -->
+  <footer class="footer">
+    <!-- ページTOPに戻るボタン・PC用 -->
+    <div class="bt-pagetop">
+      <a href="#">
+        <img src="assets/img/bt_PageTop_pc.png" alt="">
+      </a>
+    </div>
+  
+    <!-- ページTOPに戻るボタン・SP用 -->
+    <div class="bt-pagetop-sp">
+      <a href="#">
+        <img src="assets/img/bt_PageTop_sp.png" alt="">
+      </a>
+    </div>  
+  
+    <div  class="footer-layout">
+     <div class="icon-and-copyright">
+       <!-- 店名ロゴ＋SNSアイコン -->
+       <div class="logo-and-icon">
+        <div>
+          <img class="shop-logo-footer" src="assets/img/top/shop-logo-footer.png" alt="">
+        </div>
+        <!-- SNSアイコン・PC用 -->
+        <div class="sns-icon">
+          <div class="icon-instagram"><img src="assets/img/top/icon-instagram.png" alt=""></div>
+          <div class="icon-facebook"><img src="assets/img/top/icon-facebook.png" alt=""></div>
+        </div>  
+   
+       </div>
+  
+       <!-- SNSアイコン・SP用 -->
+       <div class="sns-icon-sp">
+         <div class="icon-instagram"><img src="assets/img/top/icon-instagram-sp.png" alt=""></div>
+         <div class="icon-facebook"><img src="assets/img/top/icon-facebook-sp.png" alt=""></div>
+       </div>  
+           
+       <!-- コピーライト・SP用 -->
+       <p class="copyright-sp">&copy;2025 Clean Plus All Rights Reserved. </p>    
+     </div>
+  
+     <!-- ナビゲーション -->
+     <nav class="footer-nav">
+       <ul>
+         <li><a href="index.html">ホーム</a></li>
+         <li><a href="vacant-room.html">空室クリーニング</a></li>
+         <li><a href="at-home.html">在宅クリーニング</a></li>
+         <li><a href="about.html">店舗概要</a></li>
+         <li><a href="contact.html">問い合わせ</a></li>
+       </ul>
+     </nav>
+    </div>
+  
+    <!-- コピーライト・PC用 -->
+    <p class="copyright">&copy;2025 Clean Plus All Rights Reserved. </p>  
+  
+  </footer>
+    <!-- フッターここまで -->
 
   <!-- slickの読み込み -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <!-- JavaScriptの読み込み -->
-  <script src="./script.js"></script>
+  <script src="assets/js/script.js"></script>
 
 </body>
 </html>
