@@ -1,0 +1,1463 @@
+@charset "UTF-8";
+h1 {
+  font-size: 32px;
+  color: #333333;
+  font-family: "source-sans-3", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  color: #333333;
+  font-family: "source-sans-3", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+h3 {
+  font-size: 24px;
+  color: #333333;
+  font-family: "source-sans-3", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 16px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  color: #333333;
+  font-family: "source-sans-3", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  h4 {
+    font-size: 12px;
+  }
+}
+
+p {
+  color: #333333;
+  font-family: "source-sans-3", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 16px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  margin-left: 9.3%;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 追加 */
+  padding-right: 9.3%;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    all: unset; /* すべてのプロパティをリセット */
+  }
+}
+.header > nav {
+  flex-grow: 1;
+}
+@media screen and (max-width: 768px) {
+  .header > nav {
+    display: none;
+  }
+}
+.header > nav > ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+}
+.header > nav > ul > li {
+  margin-right: 20px;
+}
+
+/* 方法① シンプルに下線を表示させる場合 */
+.header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .shop-logo-layout {
+    display: flex;
+    justify-content: center; /* 横方向に中央揃え */
+    flex: 1; /* スペースを均等に確保（必要に応じて） */
+  }
+}
+
+.shop-logo-header {
+  max-width: 70px;
+}
+@media screen and (max-width: 768px) {
+  .shop-logo-header {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+#bt-hamburger {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #bt-hamburger {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 4.7%;
+    z-index: 90;
+  }
+}
+
+#bt-close {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #bt-close {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 4.7%;
+  }
+}
+
+#nav-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #nav-sp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100vw; /* 画面幅いっぱい */
+    height: 100vh;
+    display: none;
+    z-index: 99;
+  }
+}
+
+.nav-sp-list {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .nav-sp-list {
+    display: block;
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+    padding-top: 150px;
+  }
+  .nav-sp-list > ul > li {
+    padding: 20px 35.6% 20px 7.1%;
+    font-family: "Axiforma";
+    font-size: 20px;
+    border-top-width: 1px;
+    border-top-color: #0047AB;
+    border-top-style: solid;
+  }
+  .nav-sp-list > ul > li a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-sp-bottom {
+    border-bottom-width: 1px;
+    border-bottom-color: #0047AB;
+    border-bottom-style: solid;
+  }
+}
+
+.nav-more {
+  display: none;
+  position: absolute;
+  top: 65px;
+  width: 85%;
+  height: 100vh;
+  background-color: #0047AB;
+  color: #FFFAFA;
+  z-index: 99;
+  border-radius: 10px;
+  padding: 50px;
+}
+.nav-more:hover {
+  display: block;
+}
+
+.list-top, .list-bottom {
+  display: flex;
+  margin-bottom: 50px;
+  gap: 10%;
+}
+
+.list-01-first, .list-03-first {
+  margin-bottom: 50px;
+}
+.list-01-first > h3, .list-03-first > h3 {
+  color: #FFFAFA;
+}
+.list-01-first > a, .list-03-first > a {
+  display: block;
+  margin: 4px 0; /* 上下の間隔を少し空ける（お好みで） */
+}
+
+.list-01-second, .list-02, .list-03, .list-03-second, .list-04 {
+  display: block;
+}
+.list-01-second > h3, .list-02 > h3, .list-03 > h3, .list-03-second > h3, .list-04 > h3 {
+  color: #FFFAFA;
+}
+.list-01-second > a, .list-02 > a, .list-03 > a, .list-03-second > a, .list-04 > a {
+  display: block;
+  margin: 4px 0; /* 上下の間隔を少し空ける（お好みで） */
+}
+
+.top-photo-carousel {
+  display: flex; /* フレックスコンテナに設定 */
+  justify-content: center; /* 水平方向に中央揃え */
+  align-items: center; /* 垂直方向に中央揃え（必要に応じて） */
+}
+
+.top-photo-carousel img {
+  display: block; /* 画像がインライン要素ではなくブロック要素として扱われるようにする */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.line-separation-section {
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: center; /* 水平方向に中央揃え */
+  align-items: center; /* 垂直方向に中央揃え（必要に応じて） */
+  padding-top: 100px;
+}
+@media screen and (max-width: 768px) {
+  .line-separation-section {
+    padding-top: 50px;
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+}
+
+.line-separation {
+  display: block; /* 画像をインラインではなくブロック要素にする */
+  max-width: 100%; /* 画像のサイズを親要素に合わせる */
+}
+
+.title-01 {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.strong-point-text {
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+@media screen and (max-width: 768px) {
+  .strong-point-text {
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+}
+
+.name-and-photo {
+  display: flex;
+  justify-content: flex-end; /* 水平方向に右揃え */
+  align-items: center; /* 垂直方向に中央揃え（オプション） */
+  padding-top: 75px;
+  padding-right: 20%;
+}
+
+.name-and-photo h3 {
+  margin-right: 10px; /* 画像との間にスペースを作る（必要に応じて調整） */
+}
+
+@media screen and (max-width: 768px) {
+  .name-and-photo-pc {
+    display: none;
+  }
+}
+
+.bt-switching-elements {
+  display: flex;
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .bt-switching-elements {
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+  .bt-switching-elements .button-text {
+    font-size: 20px;
+  }
+}
+
+.bt-switching {
+  background-color: #87CEEB;
+  width: 50%;
+  border-radius: 10px 10px 0 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.bt-switching > p {
+  color: #FFFAFA;
+  font-size: 24px;
+}
+
+.bt-switching.active {
+  width: 50%;
+  background-color: #0047AB;
+}
+
+.service-list {
+  display: none;
+}
+
+.service-list.show {
+  display: block;
+}
+
+.service-elements-1st {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* カード同士の間隔 */
+  max-width: 1000px; /* レイアウトの最大幅を制限 */
+  margin: 0 auto; /* 中央寄せ */
+  flex-wrap: wrap; /* スマホなどで折り返し可能に */
+  padding: 0 16px; /* 画面端に余白（スマホ対策） */
+}
+
+.service-elements-2nd {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* カード同士の間隔 */
+  max-width: 1000px; /* レイアウトの最大幅を制限 */
+  margin: 50px auto; /* 中央寄せ */
+  flex-wrap: wrap; /* スマホなどで折り返し可能に */
+  padding: 0 16px; /* 画面端に余白（スマホ対策） */
+}
+
+.service-elements-3rd {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* カード同士の間隔 */
+  max-width: 1000px; /* レイアウトの最大幅を制限 */
+  margin: 50px auto; /* 中央寄せ */
+  flex-wrap: wrap; /* スマホなどで折り返し可能に */
+  padding: 0 16px; /* 画面端に余白（スマホ対策） */
+}
+
+.service-elements-4th {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* カード同士の間隔 */
+  max-width: 1000px; /* レイアウトの最大幅を制限 */
+  margin: 0 auto; /* 中央寄せ */
+  flex-wrap: wrap; /* スマホなどで折り返し可能に */
+  padding: 0 16px; /* 画面端に余白（スマホ対策） */
+}
+
+.bt-more-service-layout {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px; /* 適宜調整 */
+  margin-bottom: 100px;
+}
+
+.bt-more-service {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF5B7;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.worries-titile {
+  margin-top: 50px;
+  margin-left: 19%;
+  font-weight: bold;
+  color: #0047AB;
+}
+@media screen and (max-width: 768px) {
+  .worries-titile {
+    margin-left: 4.7%;
+  }
+}
+
+.service-elements {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px; /* 適宜調整 */
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 768px) {
+  .service-elements {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .worries-photo {
+    display: block;
+    width: 90%;
+    margin-left: 4.7%;
+  }
+}
+
+.worries-photo-2nd-line {
+  display: block;
+  margin-left: 19%;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 768px) {
+  .worries-photo-2nd-line {
+    margin-left: 4.7%;
+    width: 90%;
+  }
+}
+
+.voice-photo {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* 必要なら余白調整 */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .voice-photo {
+    display: none;
+  }
+}
+
+.voice-photo-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .voice-photo-sp {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.flow-photo {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  align-items: center;
+  margin-top: 20px; /* 必要なら余白調整 */
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+  .flow-photo {
+    display: block;
+    text-align: center;
+  }
+  .flow-photo .flow-photo-sp {
+    margin-bottom: 50px;
+  }
+}
+
+.faq-layout {
+  padding-left: 16.8%;
+  padding-right: 16.8%;
+}
+@media screen and (max-width: 768px) {
+  .faq-layout {
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+}
+
+.toggle-button {
+  background-color: #D3D3D3;
+  width: 100%;
+  border-radius: 4px;
+  padding: 20px 50px;
+  margin-bottom: 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .faq-title {
+    font-size: 16px;
+  }
+}
+
+.toggle-button-text {
+  display: flex;
+}
+
+.toggle-content {
+  margin: 50px;
+}
+
+.ansswer-text {
+  font-size: 12px;
+}
+
+.toggle-icon {
+  margin-left: 100px; /* テキストとアイコンの間にスペースを追加 */
+  vertical-align: middle; /* 垂直方向に中央揃え */
+}
+
+.area-layout {
+  padding-left: 16.8%;
+  padding-right: 16.8%;
+}
+@media screen and (max-width: 768px) {
+  .area-layout {
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+}
+
+.area-text {
+  text-align: center;
+  margin-bottom: 75px;
+}
+@media screen and (max-width: 768px) {
+  .area-text {
+    font-size: 12px;
+  }
+}
+
+.contact-text {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .contact-text {
+    font-size: 12px;
+  }
+}
+
+.bt-friends-layout {
+  text-align: center;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.contact-elements {
+  display: block; /* インライン要素をブロック要素に変える */
+  margin-left: auto;
+  margin-right: auto; /* 左右のマージンを自動に設定し、中央揃えに */
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .contact-elements {
+    display: none;
+  }
+}
+
+.contact-elements-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .contact-elements-sp {
+    display: block;
+  }
+}
+
+.precautions-photo {
+  display: block; /* インライン要素をブロック要素に変える */
+  margin-left: auto;
+  margin-right: auto; /* 左右のマージンを自動に設定し、中央揃えに */
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .precautions-photo {
+    display: none;
+  }
+}
+
+.precautions-photo-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .precautions-photo-sp {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* 左右のマージンを自動に設定し、中央揃えに */
+  }
+}
+
+.bt-pagetop {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  .bt-pagetop {
+    display: none;
+  }
+}
+
+.bt-pagetop-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .bt-pagetop-sp {
+    display: block;
+    position: fixed;
+    right: 10px;
+    bottom: 75px;
+  }
+}
+
+.footer {
+  background-color: #0047AB;
+  color: #FFFAFA;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.footer-layout {
+  display: flex;
+  gap: 15%;
+  padding-top: 100px;
+  padding-left: 9.7%;
+  padding-right: 9.7%;
+}
+@media screen and (max-width: 768px) {
+  .footer-layout {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+}
+
+.icon-and-copyright {
+  display: flex;
+}
+
+.shop-logo-footer {
+  border-radius: 10px;
+  max-width: 200px;
+}
+@media screen and (max-width: 768px) {
+  .shop-logo-footer {
+    display: none;
+  }
+}
+
+.sns-icon {
+  display: flex;
+  margin-top: 35px;
+}
+@media screen and (max-width: 768px) {
+  .sns-icon {
+    display: none;
+  }
+}
+
+.sns-icon-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .sns-icon-sp {
+    display: flex;
+    gap: 15%;
+  }
+}
+
+.icon-instagram {
+  margin-right: 3%;
+}
+
+.footer-nav {
+  display: flex;
+  margin-top: 65px;
+}
+@media screen and (max-width: 768px) {
+  .footer-nav {
+    display: none;
+  }
+}
+.footer-nav > ul {
+  display: flex; /* ulをフレックスコンテナに */
+  list-style: none; /* デフォルトのリストスタイルを削除 */
+  margin: 0; /* マージンをリセット */
+  padding: 0; /* パディングをリセット */
+}
+.footer-nav > ul > li {
+  margin-right: 20px; /* li間のスペースを調整（最後のliには影響しない） */
+}
+
+.copyright {
+  color: #FFFAFA;
+  text-align: center;
+  padding-bottom: 75px;
+}
+@media screen and (max-width: 768px) {
+  .copyright {
+    display: none;
+  }
+}
+
+.copyright-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .copyright-sp {
+    display: block;
+    color: #FFFAFA;
+    text-align: center;
+    padding-right: 7%;
+  }
+}
+
+.big-title {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .big-title {
+    display: none;
+  }
+}
+
+.big-title-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .big-title-sp {
+    display: block;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15%;
+}
+@media screen and (max-width: 768px) {
+  .breadcrumbs {
+    padding-left: 4.7%;
+    flex-wrap: wrap; /* スマホで折り返しを許可 */
+  }
+}
+
+.service-1st-photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .service-1st-photo {
+    display: none;
+  }
+}
+
+.service-1st-photo-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .service-1st-photo-sp {
+    display: block;
+    width: 100%;
+    margin: 0px auto;
+  }
+}
+
+.bt-others {
+  display: block;
+  margin: 100px auto;
+}
+@media screen and (max-width: 768px) {
+  .bt-others {
+    width: 90%;
+  }
+}
+
+.carousel-elements {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin-right: 35px;
+}
+@media screen and (max-width: 768px) {
+  .carousel-elements {
+    width: 100%;
+    padding-top: 50px;
+  }
+}
+
+.carousel-elements-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .carousel-elements-sp {
+    display: block;
+    position: absolute;
+    left: 9%;
+    bottom: 50px;
+  }
+}
+
+.service-2nd-photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 200px auto;
+}
+@media screen and (max-width: 768px) {
+  .service-2nd-photo {
+    display: none;
+  }
+}
+
+.service-2nd-photo-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .service-2nd-photo-sp {
+    display: block;
+    margin: 100px auto;
+  }
+}
+
+.service-3rd-photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 200px auto;
+}
+@media screen and (max-width: 768px) {
+  .service-3rd-photo {
+    display: none;
+  }
+}
+
+.service-3rd-photo-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .service-3rd-photo-sp {
+    display: block;
+    margin: 100px auto;
+  }
+}
+
+.service-4th-photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 200px auto;
+}
+@media screen and (max-width: 768px) {
+  .service-4th-photo {
+    display: none;
+  }
+}
+
+.service-4th-photo-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .service-4th-photo-sp {
+    display: block;
+    margin: 100px auto;
+  }
+}
+
+.service-5th-photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 100px auto 200px auto;
+}
+@media screen and (max-width: 768px) {
+  .service-5th-photo {
+    display: none;
+  }
+}
+
+.service-5th-photo-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .service-5th-photo-sp {
+    display: block;
+    margin: 100px auto;
+  }
+}
+
+.small-title {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .small-title-02 {
+    font-size: 20px;
+  }
+}
+.first-paragraph,
+.second-paragraph {
+  max-width: 100%; /* お好みの幅に調整 */
+  margin: 0 auto; /* 中央揃えのポイント */
+  padding: 0 20%; /* スマホなどでも余白を保つための調整 */
+  text-align: left; /* 必要に応じて左寄せ（中央揃えしたい場合は center に） */
+}
+@media screen and (max-width: 768px) {
+  .first-paragraph,
+  .second-paragraph {
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+}
+
+.first-paragraph {
+  margin-bottom: 75px;
+}
+
+.explanation {
+  line-height: 2;
+}
+
+.service-6th-photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 100px auto 200px auto;
+}
+@media screen and (max-width: 768px) {
+  .service-6th-photo {
+    display: none;
+  }
+}
+
+.service-6th-photo-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .service-6th-photo-sp {
+    display: block;
+    margin: 100px auto;
+  }
+}
+
+.faq-elements {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+@media screen and (max-width: 768px) {
+  .faq-elements {
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+}
+
+.faq-title {
+  display: flex;
+  align-items: center; /* 親要素で縦方向に中央揃え */
+}
+
+.service-7th-photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 100px auto 200px auto;
+}
+@media screen and (max-width: 768px) {
+  .service-7th-photo {
+    display: none;
+  }
+}
+
+.service-7th-photo-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .service-7th-photo-sp {
+    display: block;
+    margin: 100px auto;
+  }
+}
+
+.service-8th-photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 100px auto 200px auto;
+}
+@media screen and (max-width: 768px) {
+  .service-8th-photo {
+    display: none;
+  }
+}
+
+.service-8th-photo-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .service-8th-photo-sp {
+    display: block;
+    margin: 100px auto;
+  }
+}
+
+.contact-layout {
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .contact-layout {
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+}
+
+.benefits-elemet {
+  display: block; /* インライン要素をブロック要素に変える */
+  margin: 50px auto;
+  max-width: 769px;
+}
+@media screen and (max-width: 768px) {
+  .benefits-elemet {
+    display: none;
+  }
+}
+
+.benefits-elemet-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .benefits-elemet-sp {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.bt-add-layout {
+  position: relative;
+}
+
+.bt-add {
+  position: absolute;
+  top: 97px;
+  left: 25%;
+}
+@media screen and (max-width: 1300px) {
+  .bt-add {
+    left: 23%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .bt-add {
+    left: 15%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .bt-add {
+    left: 11%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .bt-add {
+    left: 5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bt-add {
+    top: 95px;
+    left: 18%;
+  }
+}
+
+.service-first {
+  margin: 100px auto;
+}
+
+.service-1st {
+  position: relative;
+  display: flex;
+  background-color: #B3E5FC;
+  border-radius: 20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+@media screen and (max-width: 768px) {
+  .service-1st {
+    display: block;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+    margin-left: 4.7%;
+    margin-right: 4.7%;
+  }
+}
+
+.bt-more-service-1st {
+  position: absolute;
+  top: 530px;
+  right: 16.5%;
+}
+@media screen and (max-width: 768px) {
+  .bt-more-service-1st {
+    width: 85%;
+    top: 850px;
+    right: 35px;
+    display: block;
+  }
+}
+
+.service-2nd {
+  position: relative;
+}
+
+.bt-more-service-2nd {
+  position: absolute;
+  top: 530px;
+  right: 16.5%;
+}
+@media screen and (max-width: 768px) {
+  .bt-more-service-2nd {
+    width: 85%;
+    top: 850px;
+    right: 35px;
+  }
+}
+
+.service-4th {
+  position: relative;
+}
+
+.bt-more-service-4th {
+  position: absolute;
+  top: 530px;
+  right: 16.5%;
+}
+@media screen and (max-width: 768px) {
+  .bt-more-service-4th {
+    width: 85%;
+    top: 850px;
+    right: 35px;
+  }
+}
+
+.service-3rd {
+  position: relative;
+}
+
+.bt-more-service-3rd {
+  position: absolute;
+  top: 530px;
+  right: 16.5%;
+}
+@media screen and (max-width: 768px) {
+  .bt-more-service-3rd {
+    width: 85%;
+    top: 850px;
+    right: 35px;
+  }
+}
+
+.service-5th {
+  position: relative;
+}
+
+.bt-more-service-5th {
+  position: absolute;
+  top: 530px;
+  right: 16.5%;
+}
+@media screen and (max-width: 768px) {
+  .bt-more-service-5th {
+    width: 85%;
+    top: 850px;
+    right: 35px;
+  }
+}
+
+.service-6th {
+  position: relative;
+}
+
+.bt-more-service-6th {
+  position: absolute;
+  top: 530px;
+  right: 16.5%;
+}
+@media screen and (max-width: 768px) {
+  .bt-more-service-6th {
+    width: 85%;
+    top: 850px;
+    right: 35px;
+  }
+}
+
+.service-7th-indivisual {
+  position: relative;
+}
+
+.bt-more-service-7th {
+  position: absolute;
+  top: 530px;
+  right: 16.5%;
+}
+@media screen and (max-width: 768px) {
+  .bt-more-service-7th {
+    width: 85%;
+    top: 850px;
+    right: 35px;
+  }
+}
+
+.service-8th {
+  position: relative;
+}
+
+.bt-more-service-8th {
+  position: absolute;
+  top: 530px;
+  right: 16.5%;
+}
+@media screen and (max-width: 768px) {
+  .bt-more-service-8th {
+    width: 85%;
+    top: 850px;
+    right: 35px;
+  }
+}
+
+.service-9th {
+  position: relative;
+}
+
+.bt-more-service-9th {
+  position: absolute;
+  top: 530px;
+  right: 16.5%;
+}
+@media screen and (max-width: 768px) {
+  .bt-more-service-9th {
+    width: 85%;
+    top: 850px;
+    right: 35px;
+  }
+}
+
+.service-09-photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 200px auto;
+}
+@media screen and (max-width: 768px) {
+  .service-09-photo {
+    display: none;
+  }
+}
+
+.service-09-photo-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .service-09-photo-sp {
+    display: block;
+    margin: 100px auto;
+  }
+}
+
+.service-10th {
+  position: relative;
+}
+
+.bt-more-service-10th {
+  position: absolute;
+  top: 530px;
+  right: 16.5%;
+}
+@media screen and (max-width: 768px) {
+  .bt-more-service-10th {
+    width: 85%;
+    top: 850px;
+    right: 35px;
+  }
+}
+
+.service-10-photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 200px auto;
+}
+@media screen and (max-width: 768px) {
+  .service-10-photo {
+    display: none;
+  }
+}
+
+.service-10-photo-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .service-10-photo-sp {
+    display: block;
+    margin: 100px auto;
+  }
+}
+
+.service-11th {
+  position: relative;
+}
+
+.bt-more-service-11th {
+  position: absolute;
+  top: 530px;
+  right: 16.5%;
+}
+@media screen and (max-width: 768px) {
+  .bt-more-service-11th {
+    width: 85%;
+    top: 850px;
+    right: 35px;
+  }
+}
+
+.service-11-photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 200px auto;
+}
+@media screen and (max-width: 768px) {
+  .service-11-photo {
+    display: none;
+  }
+}
+
+.service-11-photo-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .service-11-photo-sp {
+    display: block;
+    margin: 100px auto;
+  }
+}
+
+.service-set {
+  padding-left: 16%;
+  padding-right: 16%;
+}
+@media screen and (max-width: 768px) {
+  .service-set {
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+}
+
+.set-title {
+  margin-top: 75px;
+  margin-bottom: 35px;
+}
+
+.left-and-right {
+  display: flex;
+  margin: 0 auto;
+}
+
+.bt-more-set {
+  margin-top: 35px;
+}
+@media screen and (max-width: 768px) {
+  .bt-more-set {
+    display: block;
+    width: 100%;
+  }
+}
+
+.set-right {
+  padding-left: 6%;
+}
+
+@media screen and (max-width: 768px) {
+  .set-01, .set-02, .set-03, .set-04, .set-05 {
+    display: none;
+  }
+}
+
+.set-plan-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .set-plan-sp {
+    display: block;
+    margin: 100px auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .name-and-photo-pc {
+    display: none;
+  }
+}
+
+.name-and-photo-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .name-and-photo-sp {
+    display: block;
+  }
+}
+
+.area-photo-01 {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .area-photo-01 {
+    display: none;
+  }
+}
+
+.area-photo-01-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .area-photo-01-sp {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */
