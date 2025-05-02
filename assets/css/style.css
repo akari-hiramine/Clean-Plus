@@ -454,7 +454,6 @@ html {
   margin-top: 20px; /* 必要なら余白調整 */
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
 }
 @media screen and (max-width: 768px) {
   .voice-photo {
@@ -613,9 +612,9 @@ html {
 }
 
 .bt-pagetop {
-  position: fixed;
+  position: absolute;
   right: 50px;
-  bottom: 50px;
+  bottom: 300px;
 }
 @media screen and (max-width: 768px) {
   .bt-pagetop {
@@ -629,13 +628,14 @@ html {
 @media screen and (max-width: 768px) {
   .bt-pagetop-sp {
     display: block;
-    position: fixed;
+    position: absolute;
     right: 10px;
     bottom: 75px;
   }
 }
 
 .footer {
+  position: relative;
   background-color: #0047AB;
   color: #FFFAFA;
   width: 100%;
@@ -735,6 +735,35 @@ html {
     color: #FFFAFA;
     text-align: center;
     padding-right: 7%;
+  }
+}
+
+.main {
+  position: relative;
+}
+
+.bt-reserve {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: 9999;
+}
+@media screen and (max-width: 768px) {
+  .bt-reserve {
+    display: none;
+  }
+}
+
+.bt-reserve-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .bt-reserve-sp {
+    display: block;
+    position: fixed;
+    top: 200px;
+    right: 0;
+    z-index: 9999;
   }
 }
 

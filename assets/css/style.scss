@@ -496,7 +496,6 @@ html {
   margin-top: 20px; /* 必要なら余白調整 */
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
 
   // スマホレイアウトのときには非表示にする
   @media screen and (max-width: 768px){
@@ -688,9 +687,9 @@ html {
 
 // ページTOPに戻るボタン・PC用
 .bt-pagetop{
-  position: fixed;
+  position: absolute;
   right: 50px;
-  bottom: 50px;
+  bottom: 300px;
 
   // スマホレイアウトのときには非表示にする
   @media screen and (max-width: 768px){
@@ -705,7 +704,7 @@ html {
   // スマホレイアウト
   @media screen and (max-width: 768px){
     display: block;
-    position: fixed;
+    position: absolute;
     right: 10px;
     bottom: 75px;
   }
@@ -714,6 +713,7 @@ html {
 
 // フッターここから
 .footer{
+  position: relative;
   background-color: #0047AB;
   color: #FFFAFA;
   width: 100%;
@@ -824,6 +824,33 @@ html {
 
 
 // 個別ページここから
+.main{
+  position: relative;
+}
+// ご予約はこちらからボタン・共通（PC用）
+.bt-reserve{
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: 9999; // ←追加する！
+
+  // スマホレイアウトのときには非表示にする
+  @media screen and (max-width: 768px){
+    display: none;    
+  }
+}
+
+.bt-reserve-sp{
+  display: none;
+  @media screen and (max-width: 768px){
+    display: block;
+    position: fixed;
+    top: 200px;
+    right: 0;
+    z-index: 9999; // ←追加する！   
+  }
+}
+
 // タイトル部分・共通（PC用）
 .big-title{
   width: 100%;
